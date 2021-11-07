@@ -11,7 +11,7 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "CapacitorPluginScreenshot.podspec"
+    "CapacitorScreenshot.podspec"
   ],
   "author": "Luan Freitas (ludufre)",
   "license": "MIT",
