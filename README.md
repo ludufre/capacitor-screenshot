@@ -7,7 +7,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
-  <a href="https://github.com/ludufre/capacitor-screenshot/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/ludufre/capacitor-screenshot/CI?style=flat-square" /></a>
+  <a href="https://github.com/ludufre/capacitor-screenshot/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/actions/workflow/status/ludufre/capacitor-screenshot/test.yml" /></a>
   <a href="https://www.npmjs.com/package/capacitor-screenshot"><img src="https://img.shields.io/npm/l/capacitor-screenshot?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/capacitor-screenshot"><img src="https://img.shields.io/npm/dw/capacitor-screenshot?style=flat-square" /></a>
@@ -25,7 +25,15 @@
 
 ## Installation
 
-`npm install capacitor-screenshot`
+```terminal
+npm install capacitor-screenshot
+ionic cap sync
+```
+
+```terminal
+yarn install capacitor-screenshot
+ionic cap sync
+````
 
 ## Configuration
 
