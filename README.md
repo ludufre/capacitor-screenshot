@@ -33,7 +33,12 @@ ionic cap sync
 ```terminal
 yarn install capacitor-screenshot
 ionic cap sync
-````
+```
+
+```terminal
+pnpm add capacitor-screenshot
+ionic cap sync
+```
 
 ## Configuration
 
