@@ -1,6 +1,6 @@
 {
   "name": "capacitor-screenshot",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "This plugin take screenshot of the app or webpage",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -63,7 +63,7 @@
     "typescript": "~5.4.5"
   },
   "peerDependencies": {
-    "@capacitor/core": "^5.0.0"
+    "@capacitor/core": "^6.0.0"
   },
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
