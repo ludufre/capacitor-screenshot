@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2025?style=flat-square" />
   <a href="https://github.com/ludufre/capacitor-screenshot/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/actions/workflow/status/ludufre/capacitor-screenshot/test.yml" /></a>
   <a href="https://www.npmjs.com/package/capacitor-screenshot"><img src="https://img.shields.io/npm/l/capacitor-screenshot?style=flat-square" /></a>
 <br>
@@ -53,5 +53,10 @@ import { Screenshot } from 'capacitor-screenshot';
 
 Screenshot.take().then((ret: { base64: string }) => {
     console.log(ret.base64); // or `data:image/png;base64,${ret.base64}`
+});
+
+// Or save to disk and get file path and web path
+Screenshot.take({saveToDisk: true}).then((ret: { base64: string }) => {
+    console.log(ret);
 });
 ```
