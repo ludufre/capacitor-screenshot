@@ -4,15 +4,30 @@ import UIKit
 
 @objc(ScreenshotPlugin)
 public class ScreenshotPlugin: CAPPlugin {
+  
+    private var imageCounter: Int = 0
     
     @objc func take(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
             let image = self.getScreenshot();
             let imageData = image?.pngData()
+
+            var result: [String: Any] = [
+                "base64": imageData?.base64EncodedString() ?? ""
+            ]
+
+            if call.getBool("saveToDisk") == true {
+                guard let fileURL = try? self.saveTemporaryImage(imageData!),
+                      let webURL = self.bridge?.portablePath(fromLocalURL: fileURL) else {
+                    call.reject("Unable to get portable path to file")
+                    return
+                }
+                
+                result["path"] = fileURL.absoluteString
+                result["webPath"] = webURL.absoluteString
+            }
             
-            call.resolve([
-                "base64": imageData?.base64EncodedString()
-            ])
+            call.resolve(result)
         }
     }
     
@@ -31,5 +46,15 @@ public class ScreenshotPlugin: CAPPlugin {
         
         return screenshotImage
     }
-}
+    
+    func saveTemporaryImage(_ data: Data) throws -> URL {
+       var url: URL
+       repeat {
+           imageCounter += 1
+           url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("screenshot-\(imageCounter).jpg")
+       } while FileManager.default.fileExists(atPath: url.path)
 
+       try data.write(to: url, options: .atomic)
+       return url
+   }
+}

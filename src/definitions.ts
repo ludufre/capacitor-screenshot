@@ -1,3 +1,3 @@
 export interface ScreenshotPlugin {
-  take(): Promise<{ base64: string }>;
+  take(opts?: { saveToDisk?: boolean }): Promise<{ base64: string }>;
 }
