@@ -56,7 +56,7 @@ Screenshot.take().then((ret: { base64: string }) => {
 });
 
 // Or save to disk and get file path and web path
-Screenshot.take({saveToDisk: true}).then((ret: { base64: string }) => {
+Screenshot.take({saveToDisk: true}).then((ret: { base64: string; path: string; webPath: string }) => {
     console.log(ret);
 });
 ```
