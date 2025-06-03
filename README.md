@@ -2,14 +2,12 @@
 <h3 align="center">Screenshot</h3>
 <p align="center"><strong><code>capacitor-screenshot</code></strong></p>
 <p align="center">
-  Capacitor community plugin for take screenshot.
+  Ionic Capacitor plugin for take screenshot
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2025?style=flat-square" />
-  <a href="https://github.com/ludufre/capacitor-screenshot/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/actions/workflow/status/ludufre/capacitor-screenshot/test.yml" /></a>
   <a href="https://www.npmjs.com/package/capacitor-screenshot"><img src="https://img.shields.io/npm/l/capacitor-screenshot?style=flat-square" /></a>
-<br>
   <a href="https://www.npmjs.com/package/capacitor-screenshot"><img src="https://img.shields.io/npm/dw/capacitor-screenshot?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/capacitor-screenshot"><img src="https://img.shields.io/npm/v/capacitor-screenshot?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -19,9 +17,9 @@
 
 ## Maintainers
 
-| Maintainer             | GitHub                                | Social                                  |
-| ---------------------- | ------------------------------------- | --------------------------------------- |
-| Luan Freitas (ludufre) | [ludufre](https://github.com/ludufre) | [@ludufre](https://twitter.com/ludufre) |
+| Maintainer             | GitHub                                | Social                            | LinkedIn                                                           |
+| ---------------------- | ------------------------------------- | --------------------------------- | ------------------------------------------------------------------ |
+| Luan Freitas (ludufre) | [ludufre](https://github.com/ludufre) | [@ludufre](https://x.com/ludufre) | [Luan Freitas](https://www.linkedin.com/in/luan-freitas-14341687/) |
 
 ## Installation
 
