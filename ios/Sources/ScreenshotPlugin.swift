@@ -3,7 +3,12 @@ import Capacitor
 import UIKit
 
 @objc(ScreenshotPlugin)
-public class ScreenshotPlugin: CAPPlugin {
+public class ScreenshotPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "ScreenshotPlugin"
+    public let jsName = "Screenshot"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "take", returnType: CAPPluginReturnPromise)
+    ]
   
     private var imageCounter: Int = 0
     

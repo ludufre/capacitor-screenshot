@@ -1,3 +1,27 @@
+# 7.2.0 (2025-06-16)
+
+
+### Features
+
+* Convert to Swift Package Manager
+
+
+# 7.1.1 (2025-06-16)
+
+
+### Features
+
+* Capacitor 7 support updates
+
+
+# 7.0.0 (2025-06-16)
+
+
+### Features
+
+* Capacitor 7 support
+
+
 # 6.0.1 (2024-04-23)
 
 

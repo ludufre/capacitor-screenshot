@@ -1,17 +1,18 @@
 {
   "name": "capacitor-screenshot",
-  "version": "7.1.1",
+  "version": "7.2.0",
   "description": "This plugin take screenshot of the app or webpage",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
-  "type": "module",
   "files": [
     "android/src/main/",
     "android/build.gradle",
     "dist/",
-    "ios/Plugin/",
+    "ios/Sources",
+    "ios/Tests",
+    "Package.swift",
     "CapacitorScreenshot.podspec"
   ],
   "author": "Luan Freitas (ludufre)",
@@ -31,7 +32,7 @@
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin && cd ..",
+    "verify:ios": "xcodebuild -scheme CapacitorScreenshot -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
@@ -45,9 +46,11 @@
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  },
   "devDependencies": {
     "@capacitor/android": "^7.0.0",
-    "@capacitor/cli": "^7.0.0",
     "@capacitor/core": "^7.0.0",
     "@capacitor/docgen": "^0.3.0",
     "@capacitor/ios": "^7.0.0",
@@ -60,7 +63,7 @@
     "rimraf": "^6.0.1",
     "rollup": "^4.30.1",
     "swiftlint": "^2.0.0",
-    "typescript": "~5.4.5"
+    "typescript": "~4.1.5"
   },
   "peerDependencies": {
     "@capacitor/core": ">=7.0.0"
@@ -77,8 +80,5 @@
     "android": {
       "src": "android"
     }
-  },
-  "dependencies": {
-    "html2canvas": "^1.4.1"
   }
 }
