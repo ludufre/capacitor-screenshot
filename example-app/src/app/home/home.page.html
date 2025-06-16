@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Blank </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button expand="block" (click)="takeScreenshot()">Take Screenshot</ion-button>
+
+  @if(screenshotAsBase64 !== '') {
+  <div class="screenshot-container">
+    <img [src]="'data:image/png;base64,' + screenshotAsBase64" alt="Screenshot" />
+  </div>
+  }
+</ion-content>

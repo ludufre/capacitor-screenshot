@@ -1,0 +1,10 @@
+.screenshot-container {
+  text-align: center;
+  margin: 20px auto;
+
+  img {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    max-height: 60vh;
+  }
+}
