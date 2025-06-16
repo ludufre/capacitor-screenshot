@@ -1,0 +1,40 @@
+{
+  "api": {
+    "name": "ScreenshotPlugin",
+    "slug": "screenshotplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "take",
+        "signature": "(opts?: { saveToDisk?: boolean | undefined; } | undefined) => any",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "- Optional parameters for the screenshot.",
+            "type": "{ saveToDisk?: boolean | undefined; } | undefined"
+          }
+        ],
+        "returns": "any",
+        "tags": [
+          {
+            "name": "param",
+            "text": "opts - Optional parameters for the screenshot."
+          },
+          {
+            "name": "returns",
+            "text": "A promise that resolves with an object containing the screenshot data."
+          }
+        ],
+        "docs": "Captures a screenshot of the current view.",
+        "complexTypes": [],
+        "slug": "take"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
